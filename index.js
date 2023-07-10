@@ -84,23 +84,34 @@ const finalizarCompra = () => {
     localStorage.remove("carrito")
 
 }
-
+let busca = ""
 const productoExsistente = (buscar) => {
     alert(ArrayProductos(buscar));
-    let buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
+    buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 }
 
 const productoInexistente = (buscar) =>{
     alert("el producto ingresado no exsiste")
-    let buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
+    buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 }
 
 const verProfuctos = () => {
 
-    let buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
+    buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 
     while (buscar != "fin") {
         let exsiste = ArrayProductos.includes(buscar)
         exsiste == "true" ? productoExsistente(buscar) : productoInexistente(buscar)
     }
+}
+
+
+let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+
+let carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'))
+
+if (carritoLocalStorage) {
+    carrito = carritoLocalStorage
+} else {
+    carrito = []
 }

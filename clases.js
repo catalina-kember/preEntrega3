@@ -9,25 +9,26 @@ export class productos {
     }
 }
 
+const ArrayDeProductos = [];
 
 export function inicializarProductos(ArrayDeProductos, idUniversal) {
     const mandalac = new productos({nombre:"mandala chica",precio:1000,descripcion: "20cm", id:idUniversal++ ,url:"./img/mandala1.jpg"})
-    ArrayProductos.push(mandalac);
+    ArrayDeProductos.push(mandalac);
 
     const mandalam = new productos({nombre:"mandala mediana",precio:2000,descripcion: "35 cm", id:idUniversal++ ,url:"./img/mandala2.jpg"})
-    ArrayProductos.push(mandalam);
+    ArrayDeProductos.push(mandalam);
 
     const mandalag = new productos({nombre:"mandala grande",precio:4000,descripcion: "50 cm", id:idUniversal++ ,url:"./img/mandala3.jpg"})
-    ArrayProductos.push(mandalag);
+    ArrayDeProductos.push(mandalag);
 
     const canastac = new productos({nombre:"canasta chica",precio:1000,descripcion: "10 cm", id:idUniversal++ ,url:"./img/canasta1.jpg"})
-    ArrayProductos.push(canastac);
+    ArrayDeProductos.push(canastac);
 
     const canastam = new productos({nombre:"canasta mediana",precio:1500,descripcion: "15 cm", id:idUniversal++ ,url:"./img/canasta2.jpg"})
-    ArrayProductos.push(canastam);
+    ArrayDeProductos.push(canastam);
 
     const canastag = new productos({nombre: "canasta grande",precio:2000,descripcion: "20 cm", id:idUniversal++ ,url:"./img/canasta3.jpg"})
-    ArrayProductos.push(canastag);
+    ArrayDeProductos.push(canastag);
     
 }
 
