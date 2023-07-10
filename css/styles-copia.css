@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*===========HEADER========*/
+
+
+h1 {
+    color: #d4a373;
+    font-size: 4rem;
+    text-align: center;
+    padding: 0.2em 0em;
+    list-style-type: disc;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    color: #ccd5ae;
+    font-size: 1.5rem;
+    text-align: center;
+    list-style-type: disc;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*revisar*/
+.contenedor-header {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.header-titulos {
+    grid-row: span 1;
+}
+
+.contenedor-nav {
+    grid-row: span 2;
+}
+
+
+.nav-link {
+    color: #ccd5ae;
+    font-size: 1.5rem;
+    list-style-type: disc;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-brand {
+    color: #d4a373;
+    list-style-type: disc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+/*=====HEADER DESKTOP=====*/
+
+@media(min-width:1200px) {
+    .nav-link {
+        color: #ccd5ae;
+        font-size: 1.5rem;
+        list-style-type: disc;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 1em;
+    }
+}
+
+/*======FOOTER=====*/
+
+h3 {
+    color: #d4a373;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    list-style-type: disc;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.img-medios-pago {
+    line-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.nosotros {
+    text-decoration: none;
+    color: #acb68d;
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+figcaption{
+    font-size: 1.4rem;
+}
+
+li {
+    list-style: none;
+}
+@media(min-width:1200px){
+    figcaption{
+        font-size: 1.8rem;
+    }
+    .nosotros{
+        font-size: 1.8rem;
+    }
+}
+
+/*=========MAIN-INDEX========*/
+
+.img-main {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.titulo-compartidas {
+    font-size: 2rem;
+    margin-top: 1em;
+    color: #fefae0;
+    background-color: #ccd5ae;
+}
+
+@media(min-width:1200px) {
+
+    .img-main {
+        width: 80%;
+        margin: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*======QUIENES SOMOS MIBILE FIRST====*/
+
+.titulo-quienes-somos {
+    margin-top: 2em;
+}
+
+.img-quienes-somos {
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+.caja-parrafo {
+    margin: 1em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*========QUIENES SOMOS desktop=======*/
+
+@media(min-width:1200px) {
+
+    .quienes-somos {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        max-width: 90%;
+        margin-left: 5%;
+    }
+
+    .titulo-quienes-somos{
+        font-size:4rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .caja-parrafo{
+        font-size:  1.6rem;
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+
+/*========COMO COMPRAR mobile-first======*/
+
+.titulo {
+    margin-top: 1.6em;
+    font-size: xx-large;
+}
+
+.video-como-comprar {
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+.pasos {
+    margin: 1em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*=======COMO COMPRAR desktop=====*/
+@media(min-width:1200px){
+
+    .section-como-comprar{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        max-width: 90%;
+        margin-left: 5%;
+    }
+
+    .titulo{
+        font-size:4rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .section-pasos{
+        grid-column: span 2;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+}
+
+
+/*=========PRODUCTOS mobile first=====*/
+.carrusel-mandalas{
+    display: none;
+}
+.producto {
+    margin-top: 1.6em;
+    font-size: xx-large;
+}
+
+.sub-productos {
+    background-color: beige;
+}
+
+.img-productos {
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+/*======PRODUCTOS desktop=====*/
+@media(min-width:1200px){
+    .img-productos{
+        width: 15vw;
+        margin-right: 1rem;
+    }
+    .section-productos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+/*======CONTACTO mobile first =====*/
+
+
+.img-contacto {
+    width: 100%;
+    margin-top: 1.6em;
+}
+
+.formulario {
+    gap: 20px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.consultas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-enviar{
+    color: aliceblue;
+    background-color: #acb68d;
+    padding: 1em;
+    border-radius: 30px;
+    justify-content: center;
+    align-content: center;
+}

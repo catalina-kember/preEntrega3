@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+h3 {
+  color: #d4a373;
+  font-size: 34px;
+  font-weight: 600;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.sub-footer {
+  font-size: 2rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.nosotros {
+  color: #ccd5ae;
+  font-size: 1.7rem;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.section-nosotros {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.section-nosotros h3 {
+  margin-top: 35px;
+}
+
+.section-medios-de-pago {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.img-medios-pago {
+  width: 3.8rem;
+  margin-left: 4px;
+}
+
+.section-redes {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.redes {
+  padding: 20px;
+  margin: 10px;
+}
+
+.redes-sociales {
+  color: #d4a373;
+  font-size: 1.6rem;
+}
+
+.intagram-img {
+  width: 1.5rem;
+}
+
+.facebook-img {
+  width: 4rem;
+}
+
+@media (min-width: 600px) {
+  .sub-footer {
+    font-size: 2rem;
+  }
+  .nosotros {
+    font-size: 2rem;
+  }
+  .intagram-img {
+    width: 2rem;
+  }
+  .facebook-img {
+    width: 5rem;
+  }
+  figcaption {
+    font-size: 2rem;
+  }
+  .section-redes {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .img-medios-pago {
+    width: 5rem;
+    margin: 30px;
+  }
+  .section-medios-de-pago {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .sub-footer {
+    font-size: 2.5rem;
+  }
+  .nosotros {
+    font-size: 2rem;
+  }
+  .section-redes {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  figcaption {
+    font-size: 2.3rem;
+  }
+  .intagram-img {
+    width: 2.3rem;
+  }
+  .facebook-img {
+    width: 5rem;
+  }
+  .section-medios-de-pago {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .img-medios-pago {
+    width: 6rem;
+    margin-left: 10px;
+  }
+}
+h1 {
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #d4a373;
+  font-size: 4rem;
+  padding: 0.2em 0em;
+}
+
+h2 {
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: #ccd5ae;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #ccd5ae;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .nav-link {
+    color: #ccd5ae;
+    list-style-type: disc;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.titulo {
+  margin-top: 1.6em;
+  font-size: xx-large;
+}
+
+.video-como-comprar {
+  width: 100%;
+  margin-top: 1.6em;
+}
+
+.pasos {
+  margin: 1em;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .video-como-comprar {
+    width: fit-content;
+    width: 80%;
+    margin: 10%;
+  }
+  .titulo {
+    font-size: 2.5rem;
+  }
+  .pasos {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .video-como-comprar {
+    width: 90%;
+  }
+  .section-como-comprar {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 2fr 1fr;
+    max-width: 80%;
+    margin-left: 2%;
+  }
+  .titulo {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    list-style-type: disc;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+  }
+  .section-pasos {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  ol li {
+    font-size: 1.8rem;
+  }
+  .subtitulo-pasos {
+    font-size: 2.6rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.img-contacto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.titulo-consultas {
+  margin-top: 6px;
+}
+
+.formulario {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.consultas {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boton-enviar {
+  color: aliceblue;
+  background-color: #acb68d;
+  padding: 1em;
+  border-radius: 30px;
+  justify-content: center;
+  align-content: center;
+}
+
+.titulo-consultas {
+  background-color: beige;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .img-contacto {
+    width: 80%;
+    margin: 10%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .img-contacto {
+    width: 60%;
+    margin: 20%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.img-main {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.titulo-compartidas {
+  font-size: 2rem;
+  margin-top: 1em;
+  color: #fefae0;
+  background-color: #ccd5ae;
+}
+
+@media (min-width: 600px) {
+  .titulo-compartidas {
+    font-size: 2.8rem;
+  }
+  .img-main {
+    width: 80%;
+    margin: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  .img-main {
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .titulo-compartidas {
+    font-size: 3.5rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.producto {
+  font-size: x-large;
+}
+
+.sub-productos {
+  background-color: beige;
+}
+
+.img-productos {
+  width: 100%;
+  margin-top: 1.6em;
+}
+
+@media (min-width: 600px) {
+  .img-productos {
+    width: 80%;
+    margin: 10%;
+    margin-top: 1em;
+    width: 90%;
+  }
+  .sub-productos {
+    font-size: 2.7rem;
+  }
+  .producto {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .img-productos {
+    width: 25vw;
+    margin: 1em;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+  .sub-productos {
+    font-size: 3.5rem;
+  }
+  .producto {
+    font-size: 3.2rem;
+    margin-top: 1em;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+.titulo-quienes-somos {
+  margin-top: 1.6em;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.img-quienes-somos {
+  width: 100%;
+  margin: 0%;
+}
+
+.caja-parrafo {
+  margin: 1em;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tarjetas-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta {
+  background-color: beige;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #d4a373;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.trajeta__img {
+  width: 50%;
+  border-radius: 30px;
+  margin-top: 12px;
+}
+
+.tarjeta__descripcion {
+  border: 5%;
+  margin: 4%;
+  font-size: 1.2rem;
+  list-style-type: disc;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.tarjetas__titulo {
+  font-size: 2rem;
+  background-color: beige;
+}
+
+@media (min-width: 600px) {
+  .img-quienes-somos {
+    width: 80%;
+    margin: 10%;
+  }
+  .caja-parrafo {
+    font-size: 1.5rem;
+    margin: 5%;
+  }
+  .tarjeta__descripcion {
+    font-size: 1.3rem;
+  }
+  .tarjetas__titulo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .quienes-somos {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 1fr;
+  }
+  .titulo-quienes-somos {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .img-quienes-somos {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 0%;
+  }
+  .caja-parrafo {
+    font-size: 1.5rem;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+  }
+  .tarjetas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  .tarjeta {
+    width: 400px;
+    height: 500px;
+  }
+  .tarjeta__descripcion {
+    font-size: 1.5rem;
+  }
+  .tarjetas__titulo {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
