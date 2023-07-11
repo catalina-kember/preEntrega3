@@ -4,7 +4,28 @@
   text-decoration: none;
   list-style: none;
 }
+.tarjeta_image {
+  width: 100%;
+  margin-top: 1.6em;
+}
 
+@media (min-width: 600px) {
+  .tarjeta_image {
+      width: 80%;
+      margin: 10%;
+      margin-top: 1em;
+      width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tarjeta_image {
+      width: 25vw;
+      margin: 1em;
+      flex-wrap: nowrap;
+      align-content: center;
+  }
+}
 h3 {
   color: #d4a373;
   font-size: 34px;

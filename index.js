@@ -10,7 +10,7 @@ inicializarProductos(ArrayDeProductos, idUniversal);
 let productoEncontrado = {};
 
 
-
+const tarjetas = document.querySelector("#tarjetas");
 const buttonHeader = document.querySelector("#header_button");
 const input = document.querySelector("#search");
 
@@ -60,10 +60,10 @@ const mostrarProductos = (el) =>{
         })
     
         tarjeta.appendChild(buttonAgregar);
-        app.appendChild(tarjeta);
+        tarjetas.appendChild(tarjeta);
     })
 }
-
+mostrarProductos();
 
 
 const finalizarCompra = () => {
@@ -86,6 +86,9 @@ const finalizarCompra = () => {
     localStorage.remove("carrito")
 
 }
+
+finalizarCompra();
+
 let busca = ""
 const productoExsistente = (buscar) => {
     alert(ArrayProductos(buscar));
