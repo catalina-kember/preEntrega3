@@ -10,7 +10,7 @@ inicializarProductos(ArrayDeProductos, idUniversal);
 let productoEncontrado = {};
 
 
-const app = document.querySelector("#app");
+
 const buttonHeader = document.querySelector("#header_button");
 const input = document.querySelector("#search");
 
@@ -39,7 +39,9 @@ buttonHeader.addEventListener("click", () => {
     })
 
 })
+
 const mostrarProductos = (el) =>{
+    
     ArrayDeProductos.forEach((el) => {
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta");
