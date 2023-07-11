@@ -21,13 +21,13 @@ export function inicializarProductos(ArrayDeProductos, idUniversal) {
     const mandalag = new productos({nombre:"mandala grande",precio:4000,descripcion: "50 cm", id:idUniversal++ ,url:"./img/mandala3.jpg"})
     ArrayDeProductos.push(mandalag);
 
-    const canastac = new productos({nombre:"canasta chica",precio:1000,descripcion: "10 cm", id:idUniversal++ ,url:"./img/canasta1.jpg"})
+    const canastac = new productos({nombre:"canasta chica",precio:1000,descripcion: "10 cm", id:idUniversal++ ,url:"./img/canastos1.jpg"})
     ArrayDeProductos.push(canastac);
 
-    const canastam = new productos({nombre:"canasta mediana",precio:1500,descripcion: "15 cm", id:idUniversal++ ,url:"./img/canasta2.jpg"})
+    const canastam = new productos({nombre:"canasta mediana",precio:1500,descripcion: "15 cm", id:idUniversal++ ,url:"./img/canastos2.jpg"})
     ArrayDeProductos.push(canastam);
 
-    const canastag = new productos({nombre: "canasta grande",precio:2000,descripcion: "20 cm", id:idUniversal++ ,url:"./img/canasta3.jpg"})
+    const canastag = new productos({nombre: "canasta grande",precio:2000,descripcion: "20 cm", id:idUniversal++ ,url:"./img/canastos3.jpg"})
     ArrayDeProductos.push(canastag);
     
 }

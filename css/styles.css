@@ -4,9 +4,55 @@
   text-decoration: none;
   list-style: none;
 }
-.tarjeta_image {
+
+button {
+  padding: 12px;
+  background: #d4a373 ;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  align-self: center;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+img {
   width: 100%;
-  margin-top: 1.6em;
+  height: 100%;    
+  object-fit:cover;
+}
+#app{
+  background-color:  #ccd5ae;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 24px;
+  justify-items: center;
+  padding: 20px;
+}
+
+#header_button {
+  border: 1px solid beige!important;
+  background-color: transparent;
+  color: black
+}
+
+.tarjeta {
+  height: 100%;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.tarjeta_image{
+  height: 65%;
+}
+.tarjeta_informacion {
+  padding: 12px;
 }
 
 @media (min-width: 600px) {
