@@ -9,7 +9,7 @@ export class productos {
     }
 }
 
-const ArrayDeProductos = [];
+export const ArrayDeProductos = [];
 
 export function inicializarProductos(ArrayDeProductos, idUniversal) {
     const mandalac = new productos({nombre:"mandala chica",precio:1000,descripcion: "20cm", id:idUniversal++ ,url:"./img/mandala1.jpg"})
