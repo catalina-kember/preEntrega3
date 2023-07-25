@@ -10,7 +10,7 @@ export class productos {
 }
 
 export const ArrayDeProductos = [];
-
+export  let ArrayCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 export function inicializarProductos(ArrayDeProductos, idUniversal) {
     const mandalac = new productos({nombre:"mandala chica",precio:1000,descripcion: "20cm", id:idUniversal++ ,url:"./img/mandala1.jpg"})
     ArrayDeProductos.push(mandalac);

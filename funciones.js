@@ -22,6 +22,7 @@ export function listarProductos() {
     });
 }
 
+import { ArrayCarrito } from './clases.js';
 
 export async function cargarProductos() {
     const response = await fetch(url);

@@ -5,7 +5,7 @@ import { inicializarProductos, agregarAlCarrito, CANTIDAD_MAXIMA_DEL_CARRITO } f
 })();
 
 import { ArrayDeProductos} from './clases.js';
-let ArrayCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
+import { ArrayCarrito } from './clases.js';
 let idUniversal = 1;
 const contenedorProductos = document.querySelector('#contenedor-productos')
 
@@ -30,7 +30,6 @@ buttonMail.addEventListener("click", () => {
     if (email) {
         Swal.fire(`ingrese emial: ${email}`)
     }
-    return (email)
 
     console.log("enviando email)")
 
@@ -46,7 +45,10 @@ buttonMail.addEventListener("click", () => {
             console.log('mail enviado con exito!', response.status, response.text);
         }, function (error) {
             console.log('no pudimos enviar el mail, vuelva a intentar', error);
-        });
+        }
+    );
+
+    return (email)
 })
 
 
@@ -112,7 +114,6 @@ const mostrarProductos = (el) => {
 mostrarProductos();
 
 import { finalizarCompra } from './funciones.js';
-
 finalizarCompra();
 
 let buscar = ""
@@ -127,7 +128,7 @@ const productoInexistente = (buscar) => {
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 }
 
-const verProfuctos = () => {
+const verProductos = () => {
 
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 
@@ -136,7 +137,7 @@ const verProfuctos = () => {
         exsiste == "true" ? productoExsistente(buscar) : productoInexistente(buscar)
     }
 }
-
+verProductos();
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
@@ -179,7 +180,7 @@ btnClick.addEventListener('click', () => {
 btnClick2.addEventListener('click');
 
 import { cargarProductos } from './funciones.js';
-
+cargarProductos();
 
 import { listarProductos } from './funciones.js';
 
