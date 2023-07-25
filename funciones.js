@@ -47,6 +47,6 @@ export let finalizarCompra = (ArrayCarrito) => {
         }
     }
     ArrayCarrito = []
-    localStorage.remove("carrito")
+    localStorage.removeItem("carrito")
 
 }

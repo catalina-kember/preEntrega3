@@ -177,7 +177,6 @@ btnClick.addEventListener('click', () => {
     });
 });
 
-btnClick2.addEventListener('click');
 
 import { cargarProductos } from './funciones.js';
 cargarProductos();
