@@ -20,7 +20,7 @@ const buttonMail = document.querySelector("#btnemail");
 
 buttonMail.addEventListener("click", () => {
 
-    const { value: email } = await Swal.fire({
+    const { value: email } =  Swal.fire({
         title: 'ingrese su email',
         input: 'email',
         inputLabel: 'Your email address',
