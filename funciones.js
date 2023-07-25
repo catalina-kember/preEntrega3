@@ -30,8 +30,8 @@ export async function cargarProductos() {
     return productos;
 }
 
-export const finalizarCompra = () => {
-    const pagoCuotas = () => {
+export let finalizarCompra = (ArrayCarrito) => {
+    let pagoCuotas = () => {
 
         let rta = prompt("desea calcular un pago (si/no): ")
 
