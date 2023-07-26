@@ -1,33 +1,43 @@
+function httprequest(method, url, data) {
+    let options = {
+        method: method,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
 
-const button = document.querySelector("#btninfo");
-const apykey = "a56d92332634edea0b49f338f976e4c5"
-const url = 'https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=' + apykey;
-button.addEventListener("click", () => {
-    
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
-        .then((response) => response.json())
-        .then((res) => {
+    if (data) {
+        options.body = JSON.stringify(data);
+    }
 
-            fetch(url)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    articles = data.articles;
+    return fetch(url, options).then(function (response) {
+        if (!response.ok) {
+            throw new Error('Error: ' + response.status + ' ' + response.statusText);
+        }
+        return response.json();
+    });
+}
 
-                    for (i = 0; i < articles.length; i++) {
-                        const tarjeta = document.createElement("div");
-                        tarjeta.classList.add("tarjeta");
-                        tarjeta.innerHTML = ` 
-                                            <div class="tarjeta_informacion">
-                                                <span class="tarjeta_titulo">Titulo: ${articles[i]['title']}</span>
-                                                <span class="tarjeta_descripcion">Descripcion: $${articles[i]['description']}</span>
-                                            </div>
-                        `   
-                    break;
-                    }
-                });
-        })
+httprequestttp('GET', 'https://jsonplaceholder.typicode.com/users')
+    .then((response) => {
+        console.log('Usuarios:', response);
+    })
+    .catch((error) => {
+        console.error('Error al obtener usuarios:', error);
+    });
 
-        .catch((error) => console.log(error));
-});
+httprequest('GET', 'https://jsonplaceholder.typicode.com/users/1')
+    .then((response) => {
+        console.log('Usuario:', response);
+    })
+    .catch((error) => {
+        console.error('Error al obtener usuario:', error);
+    });
+
+makeHttpRequest('DELETE', 'https://jsonplaceholder.typicode.com/users/1')
+    .then((response) => {
+        console.log('Usuario eliminado');
+    })
+    .catch((error) => {
+        console.error('Error al eliminar usuario:', error);
+    });

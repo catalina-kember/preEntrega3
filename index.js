@@ -1,4 +1,4 @@
-import { inicializarProductos, agregarAlCarrito } from './clases.js';
+import { inicializarProductos, agregarAlCarrito, productos } from './clases.js';
 
 (function () {
     emailjs.init("9ToHWXWvwopbPuhDc")
@@ -11,7 +11,7 @@ let idUniversal = 1;
 inicializarProductos(ArrayDeProductos, idUniversal);
 
 let productoEncontrado = {};
-
+let productosCarrito = [];
 
 
 const buttonMail = document.querySelector("#btnemail");
@@ -65,25 +65,29 @@ input.addEventListener("keypress", (event) => {
 })
 
 
-/*buttonHeader.addEventListener("click", () => {
-    app.innerHTML = '';
-    ArrayCarrito.forEach(el => {
-        const tarjeta = document.createElement("div");
-        tarjeta.classList.add("tarjeta");
-        tarjeta.innerHTML = ` 
-                        <div class="tarjeta_image"><img src="${el.url}" alt=""/></div>
-                        <div class="tarjeta_informacion">
-                            <span class="tarjeta_nombre">${el.nombre}</span>
-                            <span class="tarjeta_precio">$${el.precio}</span>
-                        </div>
-        `
 
-        app.appendChild(tarjeta);
-    })
+function agregarAlCarrito(productoAgregar) {
 
-})*/
+    const existeEnCarrito = productosCarrito.some((productos) => productos.id === productoAgregar.id);
 
+    if (existeEnCarrito) {
+        const productos = productosCarrito.map((producto) => {
+            if (productos.id === productoAgregar.id) {
+                productos.cantidad++;
+                productos.subtotal = productos.precio * productos.cantidad;
 
+                
+                return productos;
+            } else {
+                return productos;
+            }
+        });
+
+        productosCarrito = productos; 
+        productosCarrito.push(productoAgregar); 
+    }
+
+}
 
 
 const mostrarProductos = (el) => {
@@ -101,15 +105,14 @@ const mostrarProductos = (el) => {
         const buttonAgregar = document.createElement("button");
         buttonAgregar.innerText = "Agregar";
         buttonAgregar.addEventListener("click", () => {
-            agregarAlCarrito(ArrayCarrito, el);
+            agregarAlCarrito(el);
             localStorage.setItem("carrito", JSON.stringify(ArrayCarrito))
         })
-
+    
         tarjeta.appendChild(buttonAgregar);
-        tarjetas.appendChild(tarjeta);
+        app.appendChild(tarjeta);
     })
 }
-
 mostrarProductos();
 
 
@@ -174,10 +177,3 @@ btnClick.addEventListener('click', () => {
     });
 });
 
-
-import { cargarProductos } from './funciones.js';
-cargarProductos();
-
-import { listarProductos } from './funciones.js';
-
-btnClick2.addEventListener('click', listarProductos);

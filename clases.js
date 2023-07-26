@@ -1,4 +1,4 @@
-class productos {
+export class productos {
     constructor(productoRecibidoPorParametro) {
         const { nombre, precio, descripcion, id, url } = productoRecibidoPorParametro;
             this.nombre = nombre;
@@ -6,6 +6,12 @@ class productos {
             this.descripcion = descripcion;
             this.id = id;
             this.url = url;
+            this.cantidad = 1;
+            this.subtotal = 0;
+
+    }
+    obtenerTotal() {
+        this.subtotal = this.precio * this.cantidad;
     }
 }
 
