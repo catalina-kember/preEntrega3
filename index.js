@@ -90,6 +90,32 @@ function agregarAlCarrito(productoAgregar) {
 }
 
 
+let ArrayCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
+if (ArrayCarrito === null) {
+    ArrayCarrito = []
+}
+
+
+
+const app = document.querySelector("#app");
+
+
+buttonHeader.addEventListener("click", () => {
+    app.innerHTML = ''
+    ArrayCarrito.forEach(el => {
+        const tarjeta = document.createElement("div");
+        tarjeta.classList.add("tarjeta");
+        tarjeta.innerHTML = ` 
+            <div class="tarjeta_image"><img src="${el.url}" alt=""/></div>
+            <div class="tarjeta_informacion">
+                <span class="tarjeta_nombre">${el.nombre}</span>
+                <span class="tarjeta_precio">$${el.precio}</span>
+            </div>
+        `
+        app.appendChild(tarjeta);
+    })
+
+})
 const mostrarProductos = (el) => {
 
     ArrayDeProductos.forEach((el) => {
