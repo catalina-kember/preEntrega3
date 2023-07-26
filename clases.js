@@ -9,7 +9,6 @@ export class productos {
     }
 }
 
-export const ArrayDeProductos = [];
 
 export  let ArrayCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 

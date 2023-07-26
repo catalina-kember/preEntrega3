@@ -4,7 +4,7 @@ import { inicializarProductos, agregarAlCarrito, CANTIDAD_MAXIMA_DEL_CARRITO } f
     emailjs.init("9ToHWXWvwopbPuhDc")
 })();
 
-import { ArrayDeProductos} from './clases.js';
+const ArrayDeProductos = [];
 import { ArrayCarrito } from './clases.js';
 let idUniversal = 1;
 const contenedorProductos = document.querySelector('#contenedor-productos')
@@ -66,7 +66,7 @@ input.addEventListener("keypress", (event) => {
 })
 
 
-header_button.addEventListener("click", () => {
+buttonHeader.addEventListener("click", () => {
     app.innerHTML = '';
     ArrayCarrito.forEach(el => {
         const tarjeta = document.createElement("div");
@@ -128,7 +128,7 @@ const productoInexistente = (buscar) => {
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 }
 
-const verProductos = () => {
+const verProductos = (productoExsistente, productoInexistente) => {
 
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 
@@ -137,7 +137,7 @@ const verProductos = () => {
         exsiste == "true" ? productoExsistente(buscar) : productoInexistente(buscar)
     }
 }
-verProductos();
+verProductos(productoExsistente, productoInexistente);
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
 

@@ -22,12 +22,28 @@ export function listarProductos() {
     });
 }
 
-import { ArrayCarrito } from './clases.js';
+
 
 export async function cargarProductos() {
     const response = await fetch(url);
     const productos = await response.json();
     return productos;
+}
+
+let pagoCuotas = () => {
+
+    let rta = prompt("desea calcular un pago (si/no): ")
+
+    while (rta == "si") {
+        let precio = parseInt(prompt("ingrese el precio del producto: "))
+        let cantidad = parseInt(prompt("ingrese la cantidad: "))
+
+        precioTotal = precio * cantidad
+
+        let cuotas = parseInt(prompt("ingrese en cuantas cuotas lo va a pagar(1/2/3): "))
+        cuotas == 1 ? alert("el precio final a pagar es de: " + precio) : casoNegativo(precio, cuotas)
+        let rta = prompt("desea calcular un pago (si/no): ")
+    }
 }
 
 export let finalizarCompra = (ArrayCarrito) => {
@@ -48,5 +64,4 @@ export let finalizarCompra = (ArrayCarrito) => {
     }
     ArrayCarrito = []
     localStorage.removeItem("carrito")
-
 }
