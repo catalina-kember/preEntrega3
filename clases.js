@@ -1,4 +1,4 @@
-export class productos {
+class productos {
     constructor(productoRecibidoPorParametro) {
         const { nombre, precio, descripcion, id, url } = productoRecibidoPorParametro;
             this.nombre = nombre;
@@ -38,4 +38,3 @@ export const agregarAlCarrito = (carrito, producto) => {
 }
 
 
-export const CANTIDAD_MAXIMA_DEL_CARRITO = 10;

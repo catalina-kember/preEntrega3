@@ -16,6 +16,7 @@ button.addEventListener("click", () => {
                     articles = data.articles;
 
                     for (i = 0; i < articles.length; i++) {
+                        const tarjeta = document.createElement("div");
                         tarjeta.classList.add("tarjeta");
                         tarjeta.innerHTML = ` 
                                             <div class="tarjeta_informacion">

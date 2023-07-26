@@ -1,4 +1,4 @@
-import { inicializarProductos, agregarAlCarrito, CANTIDAD_MAXIMA_DEL_CARRITO } from './clases.js';
+import { inicializarProductos, agregarAlCarrito } from './clases.js';
 
 (function () {
     emailjs.init("9ToHWXWvwopbPuhDc")
@@ -7,7 +7,6 @@ import { inicializarProductos, agregarAlCarrito, CANTIDAD_MAXIMA_DEL_CARRITO } f
 const ArrayDeProductos = [];
 import { ArrayCarrito } from './clases.js';
 let idUniversal = 1;
-const contenedorProductos = document.querySelector('#contenedor-productos')
 
 inicializarProductos(ArrayDeProductos, idUniversal);
 
@@ -66,7 +65,7 @@ input.addEventListener("keypress", (event) => {
 })
 
 
-buttonHeader.addEventListener("click", () => {
+/*buttonHeader.addEventListener("click", () => {
     app.innerHTML = '';
     ArrayCarrito.forEach(el => {
         const tarjeta = document.createElement("div");
@@ -82,7 +81,7 @@ buttonHeader.addEventListener("click", () => {
         app.appendChild(tarjeta);
     })
 
-})
+})*/
 
 
 
@@ -99,7 +98,7 @@ const mostrarProductos = (el) => {
                             <span class="tarjeta_precio">$${el.precio}</span>
                         </div>
         `
-        const buttonAgregar = document.createElement("boton");
+        const buttonAgregar = document.createElement("button");
         buttonAgregar.innerText = "Agregar";
         buttonAgregar.addEventListener("click", () => {
             agregarAlCarrito(ArrayCarrito, el);
@@ -113,13 +112,10 @@ const mostrarProductos = (el) => {
 
 mostrarProductos();
 
-import { finalizarCompra } from './funciones.js';
-finalizarCompra();
 
 let buscar = ""
 
 const productoExsistente = (buscar) => {
-    alert(ArrayProductos(buscar));
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 }
 
@@ -133,10 +129,11 @@ const verProductos = (productoExsistente, productoInexistente) => {
     buscar = prompt("ingrese el producto que desee buscar. De caso de querer terminar ingrese 'fin': ")
 
     while (buscar != "fin") {
-        let exsiste = ArrayProductos.includes(buscar)
+        let exsiste = ArrayDeProductos.includes(buscar)
         exsiste == "true" ? productoExsistente(buscar) : productoInexistente(buscar)
     }
 }
+
 verProductos(productoExsistente, productoInexistente);
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
