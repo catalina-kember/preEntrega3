@@ -116,8 +116,8 @@ buttonHeader.addEventListener("click", () => {
     })
 
 })
-const mostrarProductos = (el) => {
 
+const mostrarProductos = (el) => {
     ArrayDeProductos.forEach((el) => {
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta");
@@ -125,7 +125,7 @@ const mostrarProductos = (el) => {
                         <div class="tarjeta_image"><img src="${el.url}" alt=""/></div>
                         <div class="tarjeta_informacion">
                             <span class="tarjeta_nombre">${el.nombre}</span>
-                            <span class="tarjeta_precio">$${el.precio}</span>
+                            <span class="tarjeta_precio">${el.precio}</span>
                         </div>
         `
         const buttonAgregar = document.createElement("button");
@@ -134,11 +134,11 @@ const mostrarProductos = (el) => {
             agregarAlCarrito(el);
             localStorage.setItem("carrito", JSON.stringify(ArrayCarrito))
         })
-    
         tarjeta.appendChild(buttonAgregar);
         app.appendChild(tarjeta);
     })
 }
+
 mostrarProductos();
 
 
