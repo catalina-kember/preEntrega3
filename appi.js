@@ -14,11 +14,8 @@ function httprequest(method, url, data) {
         if (!response.ok) {
             throw new Error('Error: ' + response.status + ' ' + response.statusText);
         }
-        return response.json();
     });
-}
-
-httprequestttp('GET', 'https://jsonplaceholder.typicode.com/users')
+    fetch ('GET', 'https://jsonplaceholder.typicode.com/users')
     .then((response) => {
         console.log('Usuarios:', response);
     })
@@ -26,7 +23,7 @@ httprequestttp('GET', 'https://jsonplaceholder.typicode.com/users')
         console.error('Error al obtener usuarios:', error);
     });
 
-httprequest('GET', 'https://jsonplaceholder.typicode.com/users/1')
+fetch ('GET', 'https://jsonplaceholder.typicode.com/users/1')
     .then((response) => {
         console.log('Usuario:', response);
     })
@@ -34,10 +31,13 @@ httprequest('GET', 'https://jsonplaceholder.typicode.com/users/1')
         console.error('Error al obtener usuario:', error);
     });
 
-makeHttpRequest('DELETE', 'https://jsonplaceholder.typicode.com/users/1')
+fetch ('DELETE', 'https://jsonplaceholder.typicode.com/users/1')
     .then((response) => {
         console.log('Usuario eliminado');
     })
     .catch((error) => {
         console.error('Error al eliminar usuario:', error);
     });
+    return response.json();
+}
+
