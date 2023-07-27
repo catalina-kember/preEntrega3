@@ -37,8 +37,6 @@ export function inicializarProductos(ArrayDeProductos, idUniversal) {
     
 }
 
-export const agregarAlCarrito = (carrito, producto) => {
-    carrito.push(producto)
-}
+
 
 

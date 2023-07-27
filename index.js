@@ -1,11 +1,11 @@
-import { inicializarProductos, agregarAlCarrito, productos } from './clases.js';
+import { inicializarProductos, productos } from './clases.js';
 
 (function () {
     emailjs.init("9ToHWXWvwopbPuhDc")
 })();
 
 const ArrayDeProductos = [];
-import { ArrayCarrito } from './clases.js';
+
 let idUniversal = 1;
 
 inicializarProductos(ArrayDeProductos, idUniversal);
